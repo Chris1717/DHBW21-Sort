@@ -1,0 +1,13 @@
+
+
+
+for target in 0..<data.lenght-1
+    smallest = target
+    for current in target+1..<data.lenght
+        if data[current] < data[smallest]
+            smallest = current
+    temp = data[target]
+    data[target] = data[smallest]
+    data[smallest] = temp
+
+

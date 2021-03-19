@@ -12,12 +12,17 @@ class BubbleSort {
 
         for(int round = data.length - 1; round > 0; round--) {
             prettyPrint(data);
+            boolean swap = false;
             for(int currentIdx = 0; currentIdx < round; currentIdx++) {
                 if (data[currentIdx] > data[currentIdx+1]) {
                     int tmp = data[currentIdx];
                     data[currentIdx] = data[currentIdx+1];
                     data[currentIdx+1] = tmp;
+                    swap = true;
                 }
+            }
+            if (!swap) {
+                return;
             }
         }
         prettyPrint(data);
